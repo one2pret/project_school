@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: malakademik_core 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 00:00+0000\n"
+"PO-Revision-Date: 2025-09-10 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# Menus
+msgid "Academics"
+msgstr "Akademik"
+
+msgid "Master Data"
+msgstr "Data Master"
+
+msgid "Students"
+msgstr "Siswa"
+
+msgid "Teachers"
+msgstr "Guru"
+
+msgid "Parents"
+msgstr "Orang Tua"
+
+msgid "Classrooms"
+msgstr "Kelas"
+
+msgid "Subjects"
+msgstr "Mata Pelajaran"
+
+msgid "Curricula"
+msgstr "Kurikulum"
+
+msgid "Operations"
+msgstr "Operasional"
+
+msgid "Schedules"
+msgstr "Jadwal"
+
+msgid "Attendance"
+msgstr "Absensi"
+
+msgid "Assessments"
+msgstr "Penilaian"
+
+msgid "Report Cards"
+msgstr "Rapor"
+
+msgid "Assignments"
+msgstr "Tugas"
+
+msgid "Communication"
+msgstr "Komunikasi"
+
+msgid "Notifications"
+msgstr "Notifikasi"
+
+# Student
+msgid "Student"
+msgstr "Siswa"
+
+msgid "Student ID"
+msgstr "NIS"
+
+msgid "Class"
+msgstr "Kelas"
+
+msgid "Birth Date"
+msgstr "Tanggal Lahir"
+
+msgid "Gender"
+msgstr "Jenis Kelamin"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Telepon"
+
+msgid "Address"
+msgstr "Alamat"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Manage students and their profiles."
+msgstr "Kelola siswa dan profilnya."
+
+# Teacher
+msgid "Teacher"
+msgstr "Guru"
+
+msgid "Employee Code"
+msgstr "Kode Pegawai"
+
+msgid "Subjects"
+msgstr "Mata Pelajaran"
+
+msgid "Classes"
+msgstr "Kelas"
+
+# Parent
+msgid "Parent/Guardian"
+msgstr "Orang Tua/Wali"
+
+msgid "Relation"
+msgstr "Relasi"
+
+msgid "Father"
+msgstr "Ayah"
+
+msgid "Mother"
+msgstr "Ibu"
+
+msgid "Guardian"
+msgstr "Wali"
+
+# Classroom
+msgid "Classroom"
+msgstr "Kelas"
+
+msgid "Grade"
+msgstr "Tingkat"
+
+msgid "Homeroom Teacher"
+msgstr "Wali Kelas"
+
+# Subject & Curriculum
+msgid "Subject"
+msgstr "Mata Pelajaran"
+
+msgid "Code"
+msgstr "Kode"
+
+msgid "Curriculum"
+msgstr "Kurikulum"
+
+msgid "Year"
+msgstr "Tahun"
+
+msgid "Description"
+msgstr "Deskripsi"
+
+# Schedule
+msgid "Schedule"
+msgstr "Jadwal"
+
+msgid "Classroom"
+msgstr "Kelas"
+
+msgid "Day of Week"
+msgstr "Hari"
+
+msgid "Start Time"
+msgstr "Jam Mulai"
+
+msgid "End Time"
+msgstr "Jam Selesai"
+
+msgid "Monday"
+msgstr "Senin"
+
+msgid "Tuesday"
+msgstr "Selasa"
+
+msgid "Wednesday"
+msgstr "Rabu"
+
+msgid "Thursday"
+msgstr "Kamis"
+
+msgid "Friday"
+msgstr "Jumat"
+
+msgid "Saturday"
+msgstr "Sabtu"
+
+msgid "Sunday"
+msgstr "Minggu"
+
+# Attendance
+msgid "Attendance"
+msgstr "Absensi"
+
+msgid "Lines"
+msgstr "Rincian"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Remarks"
+msgstr "Keterangan"
+
+msgid "Present"
+msgstr "Hadir"
+
+msgid "Absent"
+msgstr "Absen"
+
+msgid "Late"
+msgstr "Terlambat"
+
+msgid "Excused"
+msgstr "Izin"
+
+# Assessment
+msgid "Assessment"
+msgstr "Penilaian"
+
+msgid "Score"
+msgstr "Nilai"
+
+msgid "Notes"
+msgstr "Catatan"
+
+# Report Card
+msgid "Report Card"
+msgstr "Rapor"
+
+msgid "Term"
+msgstr "Semester"
+
+msgid "Average"
+msgstr "Rata-rata"
+
+# Assignment
+msgid "Assignment"
+msgstr "Tugas"
+
+msgid "Due Date"
+msgstr "Batas Waktu"
+
+msgid "Submissions"
+msgstr "Pengumpulan"
+
+msgid "Documents"
+msgstr "Dokumen"
+
+msgid "Feedback"
+msgstr "Masukan"
+
+# Notification
+msgid "Notification"
+msgstr "Notifikasi"
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Message"
+msgstr "Pesan"
+
+msgid "Recipients"
+msgstr "Penerima"
+
+msgid "Draft"
+msgstr "Draf"
+
+msgid "Sent"
+msgstr "Terkirim"
+
+msgid "Scheduled Date"
+msgstr "Waktu Terjadwal"
+
+msgid "Sent Date"
+msgstr "Waktu Terkirim"
+

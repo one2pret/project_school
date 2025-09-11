@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Actions (defined first, like lecture_evaluation) -->
+    <record id="action_malakademik_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">malakademik.student</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_teacher" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">malakademik.teacher</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_parent" model="ir.actions.act_window">
+        <field name="name">Parents</field>
+        <field name="res_model">malakademik.parent</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_classroom" model="ir.actions.act_window">
+        <field name="name">Classrooms</field>
+        <field name="res_model">malakademik.classroom</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_subject" model="ir.actions.act_window">
+        <field name="name">Subjects</field>
+        <field name="res_model">malakademik.subject</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_curriculum" model="ir.actions.act_window">
+        <field name="name">Curricula</field>
+        <field name="res_model">malakademik.curriculum</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_schedule" model="ir.actions.act_window">
+        <field name="name">Schedules</field>
+        <field name="res_model">malakademik.schedule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_attendance" model="ir.actions.act_window">
+        <field name="name">Attendance</field>
+        <field name="res_model">malakademik.attendance</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_assessment" model="ir.actions.act_window">
+        <field name="name">Assessments</field>
+        <field name="res_model">malakademik.assessment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_report_card" model="ir.actions.act_window">
+        <field name="name">Report Cards</field>
+        <field name="res_model">malakademik.report.card</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_assignment" model="ir.actions.act_window">
+        <field name="name">Assignments</field>
+        <field name="res_model">malakademik.assignment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_malakademik_notification" model="ir.actions.act_window">
+        <field name="name">Notifications</field>
+        <field name="res_model">malakademik.notification</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Root Menu -->
+    <menuitem id="menu_malakademik_root" name="Academics" sequence="10"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+
+    <!-- Master Data -->
+    <menuitem id="menu_malakademik_master" name="Master Data" parent="menu_malakademik_root" sequence="10"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_students" name="Students" parent="menu_malakademik_master" action="action_malakademik_student" sequence="10"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_teachers" name="Teachers" parent="menu_malakademik_master" action="action_malakademik_teacher" sequence="20"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_parents" name="Parents" parent="menu_malakademik_master" action="action_malakademik_parent" sequence="30"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_classrooms" name="Classrooms" parent="menu_malakademik_master" action="action_malakademik_classroom" sequence="40"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_subjects" name="Subjects" parent="menu_malakademik_master" action="action_malakademik_subject" sequence="50"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_curricula" name="Curricula" parent="menu_malakademik_master" action="action_malakademik_curriculum" sequence="60"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+
+    <!-- Operations -->
+    <menuitem id="menu_malakademik_operations" name="Operations" parent="menu_malakademik_root" sequence="20"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_schedules" name="Schedules" parent="menu_malakademik_operations" action="action_malakademik_schedule" sequence="10"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_attendance" name="Attendance" parent="menu_malakademik_operations" action="action_malakademik_attendance" sequence="20"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_assessments" name="Assessments" parent="menu_malakademik_operations" action="action_malakademik_assessment" sequence="30"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_report_cards" name="Report Cards" parent="menu_malakademik_operations" action="action_malakademik_report_card" sequence="40"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_assignments" name="Assignments" parent="menu_malakademik_operations" action="action_malakademik_assignment" sequence="50"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+
+    <!-- Communication -->
+    <menuitem id="menu_malakademik_communication" name="Communication" parent="menu_malakademik_root" sequence="30"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_notifications" name="Notifications" parent="menu_malakademik_communication" action="action_malakademik_notification" sequence="10"
+              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+</odoo>

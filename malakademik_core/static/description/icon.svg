@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="256" height="256" rx="32" fill="url(#g)"/>
+  <!-- Simple mortarboard (graduation cap) -->
+  <polygon points="128,64 40,98 128,132 216,98" fill="#ffffff" fill-opacity="0.9"/>
+  <rect x="92" y="128" width="72" height="20" rx="6" fill="#ffffff" fill-opacity="0.9"/>
+  <line x1="216" y1="98" x2="216" y2="140" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="216" cy="144" r="6" fill="#ffffff"/>
+  <!-- Initials -->
+  <text x="128" y="206" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-size="56" font-weight="700" fill="#ffffff" opacity="0.95">AK</text>
+</svg>

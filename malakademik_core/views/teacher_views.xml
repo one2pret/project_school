@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_teacher_tree" model="ir.ui.view">
+        <field name="name">malakademik.teacher.list</field>
+        <field name="model">malakademik.teacher</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="employee_code"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_teacher_form" model="ir.ui.view">
+        <field name="name">malakademik.teacher.form</field>
+        <field name="model">malakademik.teacher</field>
+        <field name="arch" type="xml">
+            <form string="Teacher">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="employee_code"/>
+                            <field name="partner_id"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="subject_ids" widget="many2many_tags"/>
+                            <field name="class_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- action moved to views/actions.xml -->
+</odoo>

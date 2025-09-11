@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Curriculum -->
+    <record id="cur_2024" model="malakademik.curriculum">
+        <field name="name">Kurikulum 2024</field>
+        <field name="year">2024</field>
+        <field name="description">Kurikulum contoh tahun 2024</field>
+    </record>
+
+    <!-- Subjects -->
+    <record id="sub_mathematics" model="malakademik.subject">
+        <field name="name">Matematika</field>
+        <field name="code">MAT</field>
+        <field name="curriculum_id" ref="cur_2024"/>
+    </record>
+    <record id="sub_science" model="malakademik.subject">
+        <field name="name">IPA</field>
+        <field name="code">SCI</field>
+        <field name="curriculum_id" ref="cur_2024"/>
+    </record>
+    <record id="sub_language" model="malakademik.subject">
+        <field name="name">Bahasa Indonesia</field>
+        <field name="code">IND</field>
+        <field name="curriculum_id" ref="cur_2024"/>
+    </record>
+
+    <!-- Teachers -->
+    <record id="tch_andika" model="malakademik.teacher">
+        <field name="name">Andika Pratama</field>
+        <field name="employee_code">T001</field>
+        <field name="email">andika@example.com</field>
+        <field name="phone">0811111111</field>
+        <field name="subject_ids" eval="[(6,0,[ref('sub_mathematics'), ref('sub_science')])]"/>
+    </record>
+    <record id="tch_sri" model="malakademik.teacher">
+        <field name="name">Sri Wahyuni</field>
+        <field name="employee_code">T002</field>
+        <field name="email">sri@example.com</field>
+        <field name="phone">0822222222</field>
+        <field name="subject_ids" eval="[(6,0,[ref('sub_language')])]"/>
+    </record>
+
+    <!-- Classrooms -->
+    <record id="cls_7a" model="malakademik.classroom">
+        <field name="name">Kelas 7A</field>
+        <field name="grade">7</field>
+        <field name="homeroom_teacher_id" ref="tch_sri"/>
+    </record>
+    <record id="cls_7b" model="malakademik.classroom">
+        <field name="name">Kelas 7B</field>
+        <field name="grade">7</field>
+        <field name="homeroom_teacher_id" ref="tch_andika"/>
+    </record>
+
+    <!-- Parents -->
+    <record id="par_budi" model="malakademik.parent">
+        <field name="name">Budi Santoso</field>
+        <field name="relation">father</field>
+        <field name="phone">0813333333</field>
+    </record>
+    <record id="par_ani" model="malakademik.parent">
+        <field name="name">Ani Lestari</field>
+        <field name="relation">mother</field>
+        <field name="phone">0814444444</field>
+    </record>
+
+    <!-- Students -->
+    <record id="stu_ahmad" model="malakademik.student">
+        <field name="name">Ahmad Fauzi</field>
+        <field name="student_id">S001</field>
+        <field name="class_id" ref="cls_7a"/>
+        <field name="gender">male</field>
+        <field name="parent_ids" eval="[(6,0,[ref('par_budi'), ref('par_ani')])]"/>
+    </record>
+    <record id="stu_siti" model="malakademik.student">
+        <field name="name">Siti Nurhaliza</field>
+        <field name="student_id">S002</field>
+        <field name="class_id" ref="cls_7a"/>
+        <field name="gender">female</field>
+        <field name="parent_ids" eval="[(6,0,[ref('par_budi')])]"/>
+    </record>
+    <record id="stu_eko" model="malakademik.student">
+        <field name="name">Eko Prasetyo</field>
+        <field name="student_id">S003</field>
+        <field name="class_id" ref="cls_7b"/>
+        <field name="gender">male</field>
+    </record>
+
+    <!-- Link teachers to classes (many2many) -->
+    <function model="malakademik.teacher" name="write">
+        <value eval="[ref('tch_andika'), {'class_ids': [(6,0,[ref('cls_7a'), ref('cls_7b')])]}]"/>
+    </function>
+    <function model="malakademik.teacher" name="write">
+        <value eval="[ref('tch_sri'), {'class_ids': [(6,0,[ref('cls_7a')])]}]"/>
+    </function>
+
+    <!-- Schedules -->
+    <record id="sch_7a_mon_mat" model="malakademik.schedule">
+        <field name="classroom_id" ref="cls_7a"/>
+        <field name="subject_id" ref="sub_mathematics"/>
+        <field name="teacher_id" ref="tch_andika"/>
+        <field name="day_of_week">mon</field>
+        <field name="start_time">8.0</field>
+        <field name="end_time">9.5</field>
+    </record>
+    <record id="sch_7a_tue_ind" model="malakademik.schedule">
+        <field name="classroom_id" ref="cls_7a"/>
+        <field name="subject_id" ref="sub_language"/>
+        <field name="teacher_id" ref="tch_sri"/>
+        <field name="day_of_week">tue</field>
+        <field name="start_time">9.5</field>
+        <field name="end_time">11.0</field>
+    </record>
+
+    <!-- Attendance example -->
+    <record id="att_2024_09_10_7a" model="malakademik.attendance">
+        <field name="date">2024-09-10</field>
+        <field name="classroom_id" ref="cls_7a"/>
+        <field name="schedule_id" ref="sch_7a_mon_mat"/>
+    </record>
+    <record id="att_2024_09_10_7a_ahmad" model="malakademik.attendance.line">
+        <field name="attendance_id" ref="att_2024_09_10_7a"/>
+        <field name="student_id" ref="stu_ahmad"/>
+        <field name="status">present</field>
+    </record>
+    <record id="att_2024_09_10_7a_siti" model="malakademik.attendance.line">
+        <field name="attendance_id" ref="att_2024_09_10_7a"/>
+        <field name="student_id" ref="stu_siti"/>
+        <field name="status">late</field>
+        <field name="remarks">Terlambat karena hujan</field>
+    </record>
+
+    <!-- Assessment example -->
+    <record id="asm_mid_mat_7a" model="malakademik.assessment">
+        <field name="name">Ulangan Tengah Semester - Matematika</field>
+        <field name="date">2024-10-01</field>
+        <field name="subject_id" ref="sub_mathematics"/>
+        <field name="teacher_id" ref="tch_andika"/>
+        <field name="classroom_id" ref="cls_7a"/>
+    </record>
+    <record id="asm_mid_mat_7a_ahmad" model="malakademik.assessment.line">
+        <field name="assessment_id" ref="asm_mid_mat_7a"/>
+        <field name="student_id" ref="stu_ahmad"/>
+        <field name="score">85</field>
+        <field name="notes">Baik</field>
+    </record>
+    <record id="asm_mid_mat_7a_siti" model="malakademik.assessment.line">
+        <field name="assessment_id" ref="asm_mid_mat_7a"/>
+        <field name="student_id" ref="stu_siti"/>
+        <field name="score">92</field>
+        <field name="notes">Sangat baik</field>
+    </record>
+
+    <!-- Report card example -->
+    <record id="rc_7a_2024_1_ahmad" model="malakademik.report.card">
+        <field name="student_id" ref="stu_ahmad"/>
+        <field name="term">Ganjil</field>
+        <field name="year">2024</field>
+    </record>
+    <record id="rc_7a_2024_1_ahmad_mat" model="malakademik.report.card.line">
+        <field name="report_id" ref="rc_7a_2024_1_ahmad"/>
+        <field name="subject_id" ref="sub_mathematics"/>
+        <field name="score">86</field>
+        <field name="grade">B+</field>
+    </record>
+    <record id="rc_7a_2024_1_ahmad_ind" model="malakademik.report.card.line">
+        <field name="report_id" ref="rc_7a_2024_1_ahmad"/>
+        <field name="subject_id" ref="sub_language"/>
+        <field name="score">88</field>
+        <field name="grade">A-</field>
+    </record>
+
+    <!-- Assignment example -->
+    <record id="asg_mat_1" model="malakademik.assignment">
+        <field name="name">PR Matematika Bab 1</field>
+        <field name="subject_id" ref="sub_mathematics"/>
+        <field name="teacher_id" ref="tch_andika"/>
+        <field name="classroom_id" ref="cls_7a"/>
+        <field name="due_date">2024-10-05 17:00:00</field>
+        <field name="description">Kerjakan soal 1-10 di buku paket.</field>
+    </record>
+
+    <!-- Notification example -->
+    <record id="notif_ujian" model="malakademik.notification">
+        <field name="name">Pengumuman Jadwal Ujian</field>
+        <field name="message">Ujian tengah semester akan dimulai tanggal 1 Oktober.</field>
+        <field name="recipient_student_ids" eval="[(6,0,[ref('stu_ahmad'), ref('stu_siti')])]"/>
+        <field name="state">draft</field>
+        <field name="scheduled_date">2024-09-25 08:00:00</field>
+    </record>
+
+</odoo>
+

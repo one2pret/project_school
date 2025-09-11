@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="module_category_malakademik" model="ir.module.category">
+        <field name="name">Academics</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="group_malakademik_user" model="res.groups">
+        <field name="name">Academic User</field>
+        <field name="category_id" ref="module_category_malakademik"/>
+    </record>
+
+    <record id="group_malakademik_manager" model="res.groups">
+        <field name="name">Academic Manager</field>
+        <field name="category_id" ref="module_category_malakademik"/>
+        <field name="implied_ids" eval="[(4, ref('group_malakademik_user'))]"/>
+    </record>
+</odoo>
+

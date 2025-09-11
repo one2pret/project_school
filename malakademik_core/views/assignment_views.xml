@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_assignment_list" model="ir.ui.view">
+        <field name="name">malakademik.assignment.list</field>
+        <field name="model">malakademik.assignment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="subject_id"/>
+                <field name="teacher_id"/>
+                <field name="classroom_id"/>
+                <field name="due_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_assignment_form" model="ir.ui.view">
+        <field name="name">malakademik.assignment.form</field>
+        <field name="model">malakademik.assignment</field>
+        <field name="arch" type="xml">
+            <form string="Assignment">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="subject_id"/>
+                            <field name="teacher_id"/>
+                            <field name="classroom_id"/>
+                        </group>
+                        <group>
+                            <field name="due_date"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                    <notebook>
+                        <page string="Submissions">
+                            <field name="submission_ids">
+                                <list editable="bottom">
+                                    <field name="student_id"/>
+                                    <field name="attachment_ids" widget="many2many_binary"/>
+                                    <field name="score"/>
+                                    <field name="feedback"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- action moved to views/actions.xml -->
+</odoo>

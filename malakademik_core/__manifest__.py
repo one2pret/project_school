@@ -1,0 +1,35 @@
+{
+    "name": "MalAkademik Core",
+    "summary": "Modul inti akademik: jadwal, absensi, penilaian, rapor, tugas, kurikulum, profil siswa/guru/orangtua, notifikasi.",
+    "version": "18.0.1.0.0",
+    "category": "Education",
+    "author": "Your Company",
+    "website": "",
+    "license": "LGPL-3",
+    "depends": ["base", "mail"],
+    "icon": "static/description/icon.svg",
+    "data": [
+        "security/groups.xml",
+        "security/ir.model.access.csv",
+        # Views load before menus (actions now in menus.xml)
+        "views/student_views.xml",
+        "views/teacher_views.xml",
+        "views/parent_views.xml",
+        "views/classroom_views.xml",
+        "views/subject_views.xml",
+        "views/schedule_views.xml",
+        "views/attendance_views.xml",
+        "views/assessment_views.xml",
+        "views/report_card_views.xml",
+        "views/assignment_views.xml",
+        "views/curriculum_views.xml",
+        "views/notification_views.xml",
+        # Menus last (they reference actions above)
+        "views/menus.xml",
+    ],
+    "demo": [
+        "demo/demo.xml",
+    ],
+    "application": True,
+    "installable": True,
+}

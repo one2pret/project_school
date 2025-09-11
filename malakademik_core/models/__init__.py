@@ -1,0 +1,13 @@
+from . import student
+from . import teacher
+from . import parent
+from . import classroom
+from . import subject
+from . import schedule
+from . import attendance
+from . import assessment
+from . import report_card
+from . import assignment
+from . import curriculum
+from . import notification
+

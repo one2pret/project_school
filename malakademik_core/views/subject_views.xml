@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_subject_list" model="ir.ui.view">
+        <field name="name">malakademik.subject.list</field>
+        <field name="model">malakademik.subject</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="curriculum_id"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_subject_form" model="ir.ui.view">
+        <field name="name">malakademik.subject.form</field>
+        <field name="model">malakademik.subject</field>
+        <field name="arch" type="xml">
+            <form string="Subject">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="curriculum_id"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- action moved to views/actions.xml -->
+</odoo>

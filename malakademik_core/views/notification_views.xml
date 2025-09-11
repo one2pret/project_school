@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_notification_list" model="ir.ui.view">
+        <field name="name">malakademik.notification.list</field>
+        <field name="model">malakademik.notification</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="state"/>
+                <field name="scheduled_date"/>
+                <field name="sent_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_notification_form" model="ir.ui.view">
+        <field name="name">malakademik.notification.form</field>
+        <field name="model">malakademik.notification</field>
+        <field name="arch" type="xml">
+            <form string="Notification">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="message"/>
+                        </group>
+                        <group>
+                            <field name="state"/>
+                            <field name="scheduled_date"/>
+                            <field name="sent_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Recipients">
+                            <group>
+                                <field name="recipient_student_ids" widget="many2many_tags"/>
+                                <field name="recipient_parent_ids" widget="many2many_tags"/>
+                                <field name="recipient_teacher_ids" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- action moved to views/actions.xml -->
+</odoo>

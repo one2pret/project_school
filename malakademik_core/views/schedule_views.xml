@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_schedule_list" model="ir.ui.view">
+        <field name="name">malakademik.schedule.list</field>
+        <field name="model">malakademik.schedule</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="classroom_id"/>
+                <field name="subject_id"/>
+                <field name="teacher_id"/>
+                <field name="day_of_week"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_schedule_form" model="ir.ui.view">
+        <field name="name">malakademik.schedule.form</field>
+        <field name="model">malakademik.schedule</field>
+        <field name="arch" type="xml">
+            <form string="Schedule">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="classroom_id"/>
+                            <field name="subject_id"/>
+                            <field name="teacher_id"/>
+                        </group>
+                        <group>
+                            <field name="day_of_week"/>
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- action moved to views/actions.xml -->
+</odoo>

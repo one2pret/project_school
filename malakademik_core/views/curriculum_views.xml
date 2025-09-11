@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_curriculum_list" model="ir.ui.view">
+        <field name="name">malakademik.curriculum.list</field>
+        <field name="model">malakademik.curriculum</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="year"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_curriculum_form" model="ir.ui.view">
+        <field name="name">malakademik.curriculum.form</field>
+        <field name="model">malakademik.curriculum</field>
+        <field name="arch" type="xml">
+            <form string="Curriculum">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="year"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_malakademik_curriculum" model="ir.actions.act_window">
+        <field name="name">Curricula</field>
+        <field name="res_model">malakademik.curriculum</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
+

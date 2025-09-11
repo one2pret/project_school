@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_attendance_list" model="ir.ui.view">
+        <field name="name">malakademik.attendance.list</field>
+        <field name="model">malakademik.attendance</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="classroom_id"/>
+                <field name="schedule_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_malakademik_attendance_form" model="ir.ui.view">
+        <field name="name">malakademik.attendance.form</field>
+        <field name="model">malakademik.attendance</field>
+        <field name="arch" type="xml">
+            <form string="Attendance">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date"/>
+                            <field name="classroom_id"/>
+                            <field name="schedule_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lines">
+                            <field name="line_ids">
+                                <list editable="bottom">
+                                    <field name="student_id"/>
+                                    <field name="status"/>
+                                    <field name="remarks"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- action moved to views/actions.xml -->
+</odoo>
