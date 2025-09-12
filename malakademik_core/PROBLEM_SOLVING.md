@@ -31,4 +31,8 @@ Date: 2025-09-10
 
 ## Notes
 - All list/form views use the new `<list>` view type (Odoo 18).
-- Indonesian translations available in `i18n/id.po`.
+- Translations: the previous `i18n/id.po` structure triggered Odoo's importer error during module upgrade
+  (`AttributeError: 'NoneType' object has no attribute 'groups'` in translate.py). For now, it is removed to
+  unblock installation/upgrade. Recommended next step is to generate a proper PO via Settings > Translations >
+  Export Translation (select module `malakademik_core`, language `Indonesian (id_ID)`, format PO), then edit
+  and re-add it as `i18n/id_ID.po`.

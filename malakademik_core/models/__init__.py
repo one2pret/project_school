@@ -10,4 +10,4 @@ from . import report_card
 from . import assignment
 from . import curriculum
 from . import notification
-
+from . import demo_wizard

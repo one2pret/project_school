@@ -3,7 +3,7 @@
     "summary": "Modul inti akademik: jadwal, absensi, penilaian, rapor, tugas, kurikulum, profil siswa/guru/orangtua, notifikasi.",
     "version": "18.0.1.0.0",
     "category": "Education",
-    "author": "Your Company",
+    "author": "mochwawankurnia@gmail.com",
     "website": "",
     "license": "LGPL-3",
     "depends": ["base", "mail"],
@@ -24,6 +24,7 @@
         "views/assignment_views.xml",
         "views/curriculum_views.xml",
         "views/notification_views.xml",
+        "views/demo_wizard_views.xml",
         # Menus last (they reference actions above)
         "views/menus.xml",
     ],
