@@ -11,3 +11,4 @@ from . import assignment
 from . import curriculum
 from . import notification
 from . import demo_wizard
+from . import student_export_wizard

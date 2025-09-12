@@ -25,6 +25,7 @@
         "views/curriculum_views.xml",
         "views/notification_views.xml",
         "views/demo_wizard_views.xml",
+        "views/student_export_wizard_views.xml",
         # Menus last (they reference actions above)
         "views/menus.xml",
     ],

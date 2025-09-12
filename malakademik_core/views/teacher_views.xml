@@ -19,6 +19,17 @@
         <field name="model">malakademik.teacher</field>
         <field name="arch" type="xml">
             <form string="Teacher">
+                <header>
+                    <button type="object" name="action_view_schedules" class="oe_stat_button" icon="fa-calendar">
+                        <field name="schedule_count" widget="statinfo" string="Schedules"/>
+                    </button>
+                    <button type="object" name="action_view_assessments" class="oe_stat_button" icon="fa-check-circle">
+                        <field name="assessment_count" widget="statinfo" string="Assessments"/>
+                    </button>
+                    <button type="object" name="action_view_assignments" class="oe_stat_button" icon="fa-file-text-o">
+                        <field name="assignment_count" widget="statinfo" string="Assignments"/>
+                    </button>
+                </header>
                 <sheet>
                     <group>
                         <group>

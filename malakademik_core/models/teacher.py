@@ -26,6 +26,10 @@ class Teacher(models.Model):
         string="Classes",
     )
     active = fields.Boolean(default=True)
+    # Smart button counts
+    schedule_count = fields.Integer(compute="_compute_counts", string="Schedules")
+    assessment_count = fields.Integer(compute="_compute_counts", string="Assessments")
+    assignment_count = fields.Integer(compute="_compute_counts", string="Assignments")
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -45,3 +49,53 @@ class Teacher(models.Model):
                 vals["partner_id"] = created_partners[idx].id
                 idx += 1
         return super().create(vals_list)
+
+    def _compute_counts(self):
+        for rec in self:
+            rec.schedule_count = rec.assessment_count = rec.assignment_count = 0
+        ids = self.ids
+        if not ids:
+            return
+        rg = self.env["malakademik.schedule"].read_group([("teacher_id", "in", ids)], ["teacher_id"], ["teacher_id"])
+        sch_map = {d["teacher_id"][0]: d["teacher_id_count"] for d in rg if d.get("teacher_id")}
+        rg = self.env["malakademik.assessment"].read_group([("teacher_id", "in", ids)], ["teacher_id"], ["teacher_id"])
+        asm_map = {d["teacher_id"][0]: d["teacher_id_count"] for d in rg if d.get("teacher_id")}
+        rg = self.env["malakademik.assignment"].read_group([("teacher_id", "in", ids)], ["teacher_id"], ["teacher_id"])
+        asg_map = {d["teacher_id"][0]: d["teacher_id_count"] for d in rg if d.get("teacher_id")}
+        for rec in self:
+            rec.schedule_count = sch_map.get(rec.id, 0)
+            rec.assessment_count = asm_map.get(rec.id, 0)
+            rec.assignment_count = asg_map.get(rec.id, 0)
+
+    def action_view_schedules(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Schedules"),
+            "res_model": "malakademik.schedule",
+            "view_mode": "list,form",
+            "domain": [("teacher_id", "=", self.id)],
+            "context": {"default_teacher_id": self.id},
+        }
+
+    def action_view_assessments(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Assessments"),
+            "res_model": "malakademik.assessment",
+            "view_mode": "list,form",
+            "domain": [("teacher_id", "=", self.id)],
+            "context": {"default_teacher_id": self.id},
+        }
+
+    def action_view_assignments(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Assignments"),
+            "res_model": "malakademik.assignment",
+            "view_mode": "list,form",
+            "domain": [("teacher_id", "=", self.id)],
+            "context": {"default_teacher_id": self.id},
+        }

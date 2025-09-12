@@ -53,18 +53,22 @@ Prioritas
 - [x] Input absensi harian per kelas
 - [ ] Rekap kehadiran dan pelaporan absensi untuk dinas (format standar)
 - [ ] Dashboard monitoring absensi (filter periode/kelas/guru)
+  - Task: `tasks/SIA-05.md`
 
 6) Mutasi & Alumni (P1)
 - [ ] Proses mutasi masuk/keluar (antar sekolah) dengan dokumen pendukung
 - [ ] Penandaan status alumni dan data ringkas pasca lulus
+  - Task: `tasks/SIA-06.md`
 
 7) Layanan Data Pendidik & Kependidikan (P1)
 - [ ] Data sertifikasi/pangkat/pendidikan terakhir guru/staf (riwayat)
 - [ ] Integrasi layanan (Dapodik/API Simpadu) — starter exporter
+  - Task: `tasks/SIA-07.md`
 
 8) Laporan & Rekap (P1)
 - [ ] Laporan siswa/guru/kelas (excel/pdf) — daftar dan rekap
 - [ ] Laporan nilai/absensi/alumni — filter akademik (tahun/semester/kelas)
+  - Task: `tasks/SIA-08.md`
 
 9) Pelaporan Dapodik/Diknas (P0)
 - [ ] Ekspor data siap upload (CSV/XLSX) — siswa, PTK, rombel, nilai, absensi

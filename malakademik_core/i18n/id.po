@@ -105,6 +105,11 @@ msgid "Student ID"
 msgstr "NIS"
 
 #. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__nisn
+msgid "NISN"
+msgstr "NISN"
+
+#. module: malakademik_core
 #: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__class_id
 msgid "Class"
 msgstr "Kelas"
@@ -125,9 +130,64 @@ msgid "Gender"
 msgstr "Jenis Kelamin"
 
 #. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__birth_place
+msgid "Birth Place"
+msgstr "Tempat Lahir"
+
+#. module: malakademik_core
 #: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__partner_id
 msgid "Contact"
 msgstr "Kontak"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__image_1920
+msgid "Photo"
+msgstr "Foto"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__status
+msgid "Status"
+msgstr "Status"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student__status__active
+msgid "Active"
+msgstr "Aktif"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student__status__inactive
+msgid "Inactive"
+msgstr "Tidak Aktif"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_student_form
+msgid "History"
+msgstr "Riwayat"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student_history__event_type
+msgid "Event Type"
+msgstr "Jenis Peristiwa"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student_history__event_type__in
+msgid "Admission In"
+msgstr "Masuk"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student_history__event_type__out
+msgid "Transfer Out"
+msgstr "Keluar"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student_history__school_name
+msgid "School Name"
+msgstr "Nama Sekolah"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student_history__date
+msgid "Date"
+msgstr "Tanggal"
 
 #. module: malakademik_core
 #: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__employee_code

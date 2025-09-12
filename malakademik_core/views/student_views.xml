@@ -6,9 +6,11 @@
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
+                <field name="nisn"/>
                 <field name="student_id"/>
                 <field name="class_id"/>
                 <field name="gender"/>
+                <field name="status"/>
                 <field name="email"/>
                 <field name="phone"/>
                 <field name="active"/>
@@ -21,24 +23,60 @@
         <field name="model">malakademik.student</field>
         <field name="arch" type="xml">
             <form string="Student">
+                <header>
+                    <button type="object" name="action_view_history" class="oe_stat_button" icon="fa-history" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager">
+                        <field name="history_count" widget="statinfo" string="History"/>
+                    </button>
+                    <button type="object" name="action_view_submissions" class="oe_stat_button" icon="fa-file-text-o" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager">
+                        <field name="submission_count" widget="statinfo" string="Submissions"/>
+                    </button>
+                    <button type="object" name="action_view_assessments" class="oe_stat_button" icon="fa-check-circle" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager">
+                        <field name="assessment_count" widget="statinfo" string="Assessments"/>
+                    </button>
+                    <button type="object" name="action_view_attendance" class="oe_stat_button" icon="fa-calendar" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager">
+                        <field name="attendance_count" widget="statinfo" string="Attendance"/>
+                    </button>
+                    <button type="object" name="action_view_report_cards" class="oe_stat_button" icon="fa-file-pdf-o" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager">
+                        <field name="report_card_count" widget="statinfo" string="Report Cards"/>
+                    </button>
+                </header>
                 <sheet>
                     <group>
                         <group>
                             <field name="name"/>
-                            <field name="partner_id"/>
+                            <field name="nisn"/>
                             <field name="student_id"/>
                             <field name="class_id"/>
                             <field name="parent_ids" widget="many2many_tags"/>
+                            <field name="status"/>
                         </group>
                         <group>
+                            <field name="birth_place"/>
                             <field name="birth_date"/>
                             <field name="gender"/>
+                            <field name="partner_id"/>
                             <field name="email"/>
                             <field name="phone"/>
                             <field name="address"/>
                             <field name="active"/>
                         </group>
+                        <group>
+                            <field name="image_1920" widget="image" class="oe_avatar"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="History">
+                            <field name="history_ids">
+                                <list editable="bottom">
+                                    <field name="date"/>
+                                    <field name="event_type"/>
+                                    <field name="school_name"/>
+                                    <field name="year"/>
+                                    <field name="notes"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
