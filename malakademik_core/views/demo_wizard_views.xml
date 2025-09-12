@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_malakademik_demo_wizard_form" model="ir.ui.view">
+        <field name="name">malakademik.demo.wizard.form</field>
+        <field name="model">malakademik.demo.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generate Sample Academic Data">
+                <group>
+                    <field name="generate_students"/>
+                    <field name="generate_teachers"/>
+                    <field name="generate_schedule"/>
+                    <field name="generate_assessment"/>
+                    <field name="generate_assignments"/>
+                </group>
+                <footer>
+                    <button name="action_generate" type="object" string="Generate" class="btn-primary"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_malakademik_demo_wizard" model="ir.actions.act_window">
+        <field name="name">Generate Sample Data</field>
+        <field name="res_model">malakademik.demo.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Menu under Academics for managers only -->
+    <menuitem id="menu_malakademik_tools" name="Tools" parent="menu_malakademik_root" sequence="90"
+              groups="malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_generate_demo" name="Generate Sample Data" parent="menu_malakademik_tools" sequence="10"
+              action="action_malakademik_demo_wizard" groups="malakademik_core.group_malakademik_manager"/>
+</odoo>
+

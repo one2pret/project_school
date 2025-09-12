@@ -1,272 +1,561 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: malakademik_core 18.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-10 00:00+0000\n"
-"PO-Revision-Date: 2025-09-10 00:00+0000\n"
+"POT-Creation-Date: 2025-09-11 00:00+0000\n"
+"PO-Revision-Date: 2025-09-11 00:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# Menus
-msgid "Academics"
-msgstr "Akademik"
-
-msgid "Master Data"
-msgstr "Data Master"
-
-msgid "Students"
-msgstr "Siswa"
-
-msgid "Teachers"
-msgstr "Guru"
-
-msgid "Parents"
-msgstr "Orang Tua"
-
-msgid "Classrooms"
-msgstr "Kelas"
-
-msgid "Subjects"
-msgstr "Mata Pelajaran"
-
-msgid "Curricula"
-msgstr "Kurikulum"
-
-msgid "Operations"
-msgstr "Operasional"
-
-msgid "Schedules"
-msgstr "Jadwal"
-
-msgid "Attendance"
-msgstr "Absensi"
-
-msgid "Assessments"
-msgstr "Penilaian"
-
-msgid "Report Cards"
-msgstr "Rapor"
-
-msgid "Assignments"
-msgstr "Tugas"
-
-msgid "Communication"
-msgstr "Komunikasi"
-
-msgid "Notifications"
-msgstr "Notifikasi"
-
-# Student
+# Model names
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_student
 msgid "Student"
 msgstr "Siswa"
 
-msgid "Student ID"
-msgstr "NIS"
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_student_history
+msgid "Student Academic History"
+msgstr "Riwayat Akademik Siswa"
 
-msgid "Class"
-msgstr "Kelas"
-
-msgid "Birth Date"
-msgstr "Tanggal Lahir"
-
-msgid "Gender"
-msgstr "Jenis Kelamin"
-
-msgid "Email"
-msgstr "Email"
-
-msgid "Phone"
-msgstr "Telepon"
-
-msgid "Address"
-msgstr "Alamat"
-
-msgid "Active"
-msgstr "Aktif"
-
-msgid "Manage students and their profiles."
-msgstr "Kelola siswa dan profilnya."
-
-# Teacher
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_teacher
 msgid "Teacher"
 msgstr "Guru"
 
-msgid "Employee Code"
-msgstr "Kode Pegawai"
-
-msgid "Subjects"
-msgstr "Mata Pelajaran"
-
-msgid "Classes"
-msgstr "Kelas"
-
-# Parent
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_parent
 msgid "Parent/Guardian"
 msgstr "Orang Tua/Wali"
 
-msgid "Relation"
-msgstr "Relasi"
-
-msgid "Father"
-msgstr "Ayah"
-
-msgid "Mother"
-msgstr "Ibu"
-
-msgid "Guardian"
-msgstr "Wali"
-
-# Classroom
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_classroom
 msgid "Classroom"
 msgstr "Kelas"
 
-msgid "Grade"
-msgstr "Tingkat"
-
-msgid "Homeroom Teacher"
-msgstr "Wali Kelas"
-
-# Subject & Curriculum
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_subject
 msgid "Subject"
 msgstr "Mata Pelajaran"
 
-msgid "Code"
-msgstr "Kode"
-
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_curriculum
 msgid "Curriculum"
 msgstr "Kurikulum"
 
-msgid "Year"
-msgstr "Tahun"
-
-msgid "Description"
-msgstr "Deskripsi"
-
-# Schedule
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_schedule
 msgid "Schedule"
 msgstr "Jadwal"
 
-msgid "Classroom"
-msgstr "Kelas"
-
-msgid "Day of Week"
-msgstr "Hari"
-
-msgid "Start Time"
-msgstr "Jam Mulai"
-
-msgid "End Time"
-msgstr "Jam Selesai"
-
-msgid "Monday"
-msgstr "Senin"
-
-msgid "Tuesday"
-msgstr "Selasa"
-
-msgid "Wednesday"
-msgstr "Rabu"
-
-msgid "Thursday"
-msgstr "Kamis"
-
-msgid "Friday"
-msgstr "Jumat"
-
-msgid "Saturday"
-msgstr "Sabtu"
-
-msgid "Sunday"
-msgstr "Minggu"
-
-# Attendance
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_attendance
 msgid "Attendance"
 msgstr "Absensi"
 
-msgid "Lines"
-msgstr "Rincian"
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_attendance_line
+msgid "Attendance Line"
+msgstr "Rincian Absensi"
 
-msgid "Status"
-msgstr "Status"
-
-msgid "Remarks"
-msgstr "Keterangan"
-
-msgid "Present"
-msgstr "Hadir"
-
-msgid "Absent"
-msgstr "Absen"
-
-msgid "Late"
-msgstr "Terlambat"
-
-msgid "Excused"
-msgstr "Izin"
-
-# Assessment
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_assessment
 msgid "Assessment"
 msgstr "Penilaian"
 
-msgid "Score"
-msgstr "Nilai"
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_assessment_line
+msgid "Assessment Line"
+msgstr "Rincian Penilaian"
 
-msgid "Notes"
-msgstr "Catatan"
-
-# Report Card
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_report_card
 msgid "Report Card"
 msgstr "Rapor"
 
-msgid "Term"
-msgstr "Semester"
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_report_card_line
+msgid "Report Card Line"
+msgstr "Rincian Rapor"
 
-msgid "Average"
-msgstr "Rata-rata"
-
-# Assignment
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_assignment
 msgid "Assignment"
 msgstr "Tugas"
 
-msgid "Due Date"
-msgstr "Batas Waktu"
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_assignment_submission
+msgid "Assignment Submission"
+msgstr "Pengumpulan Tugas"
 
-msgid "Submissions"
-msgstr "Pengumpulan"
-
-msgid "Documents"
-msgstr "Dokumen"
-
-msgid "Feedback"
-msgstr "Masukan"
-
-# Notification
+#. module: malakademik_core
+#: model:ir.model,name:malakademik_core.model_malakademik_notification
 msgid "Notification"
 msgstr "Notifikasi"
 
+# Field labels (ir.model.fields)
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__student_id
+msgid "Student ID"
+msgstr "NIS"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__class_id
+msgid "Class"
+msgstr "Kelas"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__parent_ids
+msgid "Parents"
+msgstr "Orang Tua"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__birth_date
+msgid "Birth Date"
+msgstr "Tanggal Lahir"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__gender
+msgid "Gender"
+msgstr "Jenis Kelamin"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__partner_id
+msgid "Contact"
+msgstr "Kontak"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__employee_code
+msgid "Employee Code"
+msgstr "Kode Pegawai"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__subject_ids
+msgid "Subjects"
+msgstr "Mata Pelajaran"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__class_ids
+msgid "Classes"
+msgstr "Kelas"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_classroom__grade
+msgid "Grade"
+msgstr "Tingkat"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_classroom__homeroom_teacher_id
+msgid "Homeroom Teacher"
+msgstr "Wali Kelas"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_subject__code
+msgid "Code"
+msgstr "Kode"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_subject__curriculum_id
+msgid "Curriculum"
+msgstr "Kurikulum"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_curriculum__year
+msgid "Year"
+msgstr "Tahun"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_curriculum__description
+msgid "Description"
+msgstr "Deskripsi"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__classroom_id
+msgid "Classroom"
+msgstr "Kelas"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__teacher_id
+msgid "Teacher"
+msgstr "Guru"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__subject_id
 msgid "Subject"
-msgstr "Subjek"
+msgstr "Mata Pelajaran"
 
-msgid "Message"
-msgstr "Pesan"
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__day_of_week
+msgid "Day of Week"
+msgstr "Hari"
 
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__start_time
+msgid "Start Time"
+msgstr "Jam Mulai"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__end_time
+msgid "End Time"
+msgstr "Jam Selesai"
+
+# Wizard labels (views)
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Generate Sample Academic Data"
+msgstr "Buat Data Akademik Contoh"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Students/Parents"
+msgstr "Siswa/Orang Tua"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Teachers"
+msgstr "Guru"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Schedules & Attendance"
+msgstr "Jadwal & Absensi"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Assessments & Report Cards"
+msgstr "Penilaian & Rapor"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Assignments & Notifications"
+msgstr "Tugas & Notifikasi"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Generate"
+msgstr "Buat"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_demo_wizard_form
+msgid "Cancel"
+msgstr "Batal"
+
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_root
+msgid "Academics"
+msgstr "Akademik"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_master
+msgid "Master Data"
+msgstr "Data Master"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_students
+msgid "Students"
+msgstr "Siswa"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_teachers
+msgid "Teachers"
+msgstr "Guru"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_parents
+msgid "Parents"
+msgstr "Orang Tua"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_classrooms
+msgid "Classrooms"
+msgstr "Kelas"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_subjects
+msgid "Subjects"
+msgstr "Mata Pelajaran"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_curricula
+msgid "Curricula"
+msgstr "Kurikulum"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_operations
+msgid "Operations"
+msgstr "Operasional"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_schedules
+msgid "Schedules"
+msgstr "Jadwal"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_attendance
+msgid "Attendance"
+msgstr "Absensi"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_assessments
+msgid "Assessments"
+msgstr "Penilaian"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_report_cards
+msgid "Report Cards"
+msgstr "Rapor"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_assignments
+msgid "Assignments"
+msgstr "Tugas"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_communication
+msgid "Communication"
+msgstr "Komunikasi"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_notifications
+msgid "Notifications"
+msgstr "Notifikasi"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_tools
+msgid "Tools"
+msgstr "Alat"
+
+#. module: malakademik_core
+#: model:ir.ui.menu,name:malakademik_core.menu_malakademik_generate_demo
+msgid "Generate Sample Data"
+msgstr "Buat Data Contoh"
+
+# View labels (form/page strings)
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_student_form
+msgid "Student"
+msgstr "Siswa"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_teacher_form
+msgid "Teacher"
+msgstr "Guru"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_parent_form
+msgid "Parent/Guardian"
+msgstr "Orang Tua/Wali"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_classroom_form
+msgid "Classroom"
+msgstr "Kelas"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_subject_form
+msgid "Subject"
+msgstr "Mata Pelajaran"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_curriculum_form
+msgid "Curriculum"
+msgstr "Kurikulum"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_schedule_form
+msgid "Schedule"
+msgstr "Jadwal"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_attendance_form
+msgid "Attendance"
+msgstr "Absensi"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_attendance_form
+msgid "Lines"
+msgstr "Rincian"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_assessment_form
+msgid "Assessment"
+msgstr "Penilaian"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_assessment_form
+msgid "Lines"
+msgstr "Rincian"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_report_card_form
+msgid "Report Card"
+msgstr "Rapor"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_report_card_form
+msgid "Lines"
+msgstr "Rincian"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_assignment_form
+msgid "Assignment"
+msgstr "Tugas"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_assignment_form
+msgid "Submissions"
+msgstr "Pengumpulan"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_notification_form
+msgid "Notification"
+msgstr "Notifikasi"
+
+#. module: malakademik_core
+#: model_terms:ir.ui.view,arch_db:malakademik_core.view_malakademik_notification_form
 msgid "Recipients"
 msgstr "Penerima"
 
+# Common field labels (ir.model.fields)
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_parent__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_classroom__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_subject__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_curriculum__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_schedule__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_attendance__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_assessment__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_report_card__name
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_assignment__name
+msgid "Name"
+msgstr "Nama"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__email
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__email
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_parent__email
+msgid "Email"
+msgstr "Email"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__phone
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__phone
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_parent__phone
+msgid "Phone"
+msgstr "Telepon"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__address
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_parent__address
+msgid "Address"
+msgstr "Alamat"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_student__active
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_teacher__active
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_parent__active
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_classroom__active
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_subject__active
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_curriculum__active
+msgid "Active"
+msgstr "Aktif"
+
+# Dates and misc
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_attendance__date
+msgid "Date"
+msgstr "Tanggal"
+
+#. module: malakademik_core
+#: model:ir.model.fields,field_description:malakademik_core.field_malakademik_attendance__classroom_id
+msgid "Classroom"
+msgstr "Kelas"
+
+# Selection values
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__mon
+msgid "Monday"
+msgstr "Senin"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__tue
+msgid "Tuesday"
+msgstr "Selasa"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__wed
+msgid "Wednesday"
+msgstr "Rabu"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__thu
+msgid "Thursday"
+msgstr "Kamis"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__fri
+msgid "Friday"
+msgstr "Jumat"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__sat
+msgid "Saturday"
+msgstr "Sabtu"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_schedule__day_of_week__sun
+msgid "Sunday"
+msgstr "Minggu"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_attendance_line__status__present
+msgid "Present"
+msgstr "Hadir"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_attendance_line__status__absent
+msgid "Absent"
+msgstr "Absen"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_attendance_line__status__late
+msgid "Late"
+msgstr "Terlambat"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_attendance_line__status__excused
+msgid "Excused"
+msgstr "Izin"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student__gender__male
+msgid "Male"
+msgstr "Laki-laki"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student__gender__female
+msgid "Female"
+msgstr "Perempuan"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_student__gender__other
+msgid "Other"
+msgstr "Lainnya"
+
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_notification__state__draft
 msgid "Draft"
 msgstr "Draf"
 
+#. module: malakademik_core
+#: model:ir.model.fields.selection,name:malakademik_core.selection__malakademik_notification__state__sent
 msgid "Sent"
 msgstr "Terkirim"
-
-msgid "Scheduled Date"
-msgstr "Waktu Terjadwal"
-
-msgid "Sent Date"
-msgstr "Waktu Terkirim"
-
