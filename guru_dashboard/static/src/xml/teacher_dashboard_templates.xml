@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="guru_dashboard.TeacherDashboard" owl="1">
+        <div class="o_guru_dashboard">
+            <t t-if="state.loading">
+                <div class="o_dashboard_loading">
+                    <span class="spinner"/>
+                    <span>Loading teacher dashboard...</span>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="dashboard-header">
+                    <div>
+                        <div class="pill">Modern Teacher Insights</div>
+                        <h2>
+                            <t t-esc="component and component.greeting or ''"/>
+                            <span> </span>
+                            <t t-esc="state.data.teacher and state.data.teacher.name or ''"/>
+                        </h2>
+                        <div class="meta">
+                            <span>
+                                <i class="fa fa-calendar"/>
+                                <t t-esc="component and component.currentDate or ''"/>
+                            </span>
+                        </div>
+                    </div>
+                    <t t-if="state.teacherOptions and state.teacherOptions.length">
+                        <div class="teacher-selector">
+                            <label for="teacher_selector">Guru</label>
+                            <select id="teacher_selector" class="o_teacher_selector" t-on-change="component._onTeacherChange">
+                                <t t-foreach="state.teacherOptions" t-as="opt" t-key="opt.id">
+                                    <option t-att-value="opt.id" t-att-selected="state.selectedTeacherId == opt.id and 'selected' or False">
+                                        <t t-esc="opt.name or ''"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </t>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="label">Kelas Dibina</div>
+                        <div class="value"><t t-esc="state.data.cards and state.data.cards.class_count or 0"/></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Jadwal Hari Ini</div>
+                        <div class="value"><t t-esc="state.data.cards and state.data.cards.today_lessons or 0"/></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Penilaian Pending</div>
+                        <div class="value"><t t-esc="state.data.cards and state.data.cards.pending_grading or 0"/></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Notifikasi Draft</div>
+                        <div class="value"><t t-esc="state.data.cards and state.data.cards.unread_notifications or 0"/></div>
+                    </div>
+                </div>
+
+                <div class="chart-panels">
+                    <div class="chart-card">
+                        <div class="section-title">
+                            <h3>Tren Kehadiran</h3>
+                            <span>7 pertemuan terakhir</span>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="attendanceChart"/>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <div class="section-title">
+                            <h3>Rata-rata Nilai</h3>
+                            <span>Mata pelajaran diajar</span>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="scoreChart"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="section-title">
+                        <h3>Agenda Mengajar</h3>
+                        <span>5 jadwal terdekat</span>
+                    </div>
+                    <t t-if="state.data.upcoming and state.data.upcoming.length">
+                        <div class="upcoming-list">
+                            <t t-foreach="state.data.upcoming" t-as="item" t-key="item and item.time or loop.index">
+                                <div class="upcoming-item">
+                                    <div class="upcoming-title">
+                                        <strong t-esc="item and item.title or ''"/>
+                                        <div class="meta">
+                                            <span><i class="fa fa-calendar"/> <t t-esc="item and item.day or ''"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="chip"><i class="fa fa-clock-o"/> <t t-esc="item and item.time or ''"/></div>
+                                </div>
+                            </t>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <div class="upcoming-empty">Tidak ada agenda terdekat.</div>
+                    </t>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

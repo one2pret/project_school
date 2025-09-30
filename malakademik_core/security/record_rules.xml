@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Teacher visibility limited to their own profile -->
+    <record id="rule_teacher_self_access" model="ir.rule">
+        <field name="name">Teacher Self Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_teacher"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_user'))]"/>
+        <field name="domain_force">[("partner_id", "=", user.partner_id.id)]</field>
+    </record>
+
+    <!-- Manager full access to teacher records -->
+    <record id="rule_teacher_manager_access" model="ir.rule">
+        <field name="name">Teacher Manager Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_teacher"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_manager'))]"/>
+        <field name="domain_force">[(1, "=", 1)]</field>
+    </record>
+
+    <!-- Schedules accessible when taught by the logged teacher -->
+    <record id="rule_schedule_teacher_access" model="ir.rule">
+        <field name="name">Schedule Teacher Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_schedule"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_user'))]"/>
+        <field name="domain_force">[("teacher_id.partner_id", "=", user.partner_id.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Assignments owned by the teacher -->
+    <record id="rule_assignment_teacher_access" model="ir.rule">
+        <field name="name">Assignment Teacher Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_assignment"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_user'))]"/>
+        <field name="domain_force">[("teacher_id.partner_id", "=", user.partner_id.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_assignment_submission_teacher_access" model="ir.rule">
+        <field name="name">Assignment Submission Teacher Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_assignment_submission"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_user'))]"/>
+        <field name="domain_force">[("assignment_id.teacher_id.partner_id", "=", user.partner_id.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_assessment_teacher_access" model="ir.rule">
+        <field name="name">Assessment Teacher Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_assessment"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_user'))]"/>
+        <field name="domain_force">[("teacher_id.partner_id", "=", user.partner_id.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_assessment_line_teacher_access" model="ir.rule">
+        <field name="name">Assessment Line Teacher Access</field>
+        <field name="model_id" ref="malakademik_core.model_malakademik_assessment_line"/>
+        <field name="groups" eval="[(4, ref('malakademik_core.group_malakademik_user'))]"/>
+        <field name="domain_force">[("assessment_id.teacher_id.partner_id", "=", user.partner_id.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+</odoo>

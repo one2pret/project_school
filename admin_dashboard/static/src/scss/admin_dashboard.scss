@@ -1,0 +1,49 @@
+.o_admin_dashboard {
+    background: radial-gradient(circle at top left, #1f2a38, #0b1622);
+    color: #f5f7fa;
+    min-height: 100%;
+    padding: 24px 32px 48px;
+}
+
+.o_admin_dashboard h1,
+.o_admin_dashboard h2,
+.o_admin_dashboard h3 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.o_admin_dashboard .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.o_admin_dashboard .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.o_admin_dashboard .stat-card {
+    background: rgba(27, 38, 53, 0.85);
+    border-radius: 18px;
+    border: 1px solid rgba(103, 173, 255, 0.15);
+    padding: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.o_admin_dashboard .stat-card .value {
+    margin-top: 8px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.o_admin_dashboard .warning {
+    background: rgba(255, 200, 0, 0.1);
+    border: 1px solid rgba(255, 200, 0, 0.3);
+    color: #ffe072;
+    padding: 16px;
+    border-radius: 12px;
+}

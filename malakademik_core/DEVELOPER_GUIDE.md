@@ -70,3 +70,17 @@ Konvensi Tambahan
 Referensi Cepat
 - README: gambaran fitur dan struktur.
 - PROBLEM_SOLVING.md: isu yang pernah terjadi dan solusinya.
+
+
+Front-end Dashboard
+- Modul contoh `guru_dashboard` (OWL + Chart.js) berada di `workspace_dev/project_school/guru_dashboard`.
+- Daftar asset di manifest modul dan gunakan `web.assets_backend` untuk menyertakan JS/SCSS/QWeb.
+- Endpoint data: `controllers/dashboard.py` mengembalikan JSON untuk widget; perluas payload saat menambah metrik.
+- Client action terdaftar dengan `actionRegistry.add("guru_dashboard.teacher_dashboard", ...)` dan dihubungkan melalui `ir.actions.client` + menu Academics > Teacher Dashboard.
+
+
+Uninstall Modul
+- Jalankan Odoo shell: `odoo-bin shell -c odoo.conf -d <db>`.
+- Eksekusi `env['ir.module.module'].search([('name', '=', 'guru_dashboard')]).button_immediate_uninstall()` untuk mencopot modul lewat terminal.
+- Gunakan `exit()` untuk keluar dari shell.
+

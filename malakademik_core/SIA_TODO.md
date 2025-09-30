@@ -52,7 +52,8 @@ Prioritas
 5) Absensi Siswa & Guru (P1)
 - [x] Input absensi harian per kelas
 - [ ] Rekap kehadiran dan pelaporan absensi untuk dinas (format standar)
-- [ ] Dashboard monitoring absensi (filter periode/kelas/guru)
+- [~] Dashboard monitoring absensi (filter periode/kelas/guru)
+  - Progress: Modul `guru_dashboard` menampilkan ringkasan hadir/tidak hadir per guru; perluas ke filter periode & perbandingan tingkat kelas.
   - Task: `tasks/SIA-05.md`
 
 6) Mutasi & Alumni (P1)
@@ -226,3 +227,8 @@ SIA-10 Keamanan & Hak Akses (P0)
   - [ ] Record rules bila perlu (pembatasan per kelas/guru). (security)
   - [ ] Dokumen SOP backup + (opsional) cron skrip backup. (docs/cron)
 - Estimasi: 8â€“12 jam.
+
+
+Maintenance – Uninstall Modul
+- Untuk melepas modul custom, gunakan Odoo shell: `odoo-bin shell -c odoo.conf -d <db>` lalu `env['ir.module.module'].search([('name', '=', 'guru_dashboard')]).button_immediate_uninstall()` sebelum keluar (`exit()`).
+

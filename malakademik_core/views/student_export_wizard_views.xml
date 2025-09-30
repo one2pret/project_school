@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="view_malakademik_student_export_wizard" model="ir.ui.view">
+    <record id="view_malakademik_student_export_wizard_form" model="ir.ui.view">
         <field name="name">malakademik.student.export.wizard.form</field>
         <field name="model">malakademik.student.export.wizard</field>
         <field name="arch" type="xml">
-            <form string="Export Siswa (CSV Dapodik)">
+            <form string="Export Students (Dapodik CSV)">
                 <group>
                     <field name="class_id"/>
                     <field name="include_header"/>
                     <field name="delimiter"/>
+                    <field name="file_name" readonly="1"/>
+                    <field name="file_data" filename="file_name" readonly="1" widget="binary"/>
                 </group>
                 <footer>
-                    <button name="action_export" type="object" string="Export" class="btn-primary"/>
+                    <button name="action_export" type="object" string="Generate" class="btn-primary"/>
                     <button string="Close" special="cancel"/>
                 </footer>
-                <group>
-                    <field name="file_name" readonly="1"/>
-                    <field name="file_data" filename="file_name" readonly="1"/>
-                </group>
             </form>
         </field>
     </record>
 
     <record id="action_malakademik_student_export_wizard" model="ir.actions.act_window">
-        <field name="name">Export Siswa (CSV Dapodik)</field>
+        <field name="name">Export Students (CSV)</field>
         <field name="res_model">malakademik.student.export.wizard</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
-
-    <menuitem id="menu_malakademik_export" name="Export Siswa (CSV Dapodik)" parent="menu_malakademik_tools" action="action_malakademik_student_export_wizard" sequence="20" groups="malakademik_core.group_malakademik_manager"/>
 </odoo>

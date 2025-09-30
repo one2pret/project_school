@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="admin_dashboard.AdminDashboard" owl="1">
+        <div class="o_admin_dashboard">
+            <t t-if="state.loading">
+                <div class="o_dashboard_loading">
+                    <span class="spinner"/>
+                    <span>Loading admin dashboard...</span>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="dashboard-header">
+                    <h2>Admin Dashboard</h2>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="label">Jumlah Siswa</div>
+                        <div class="value"><t t-esc="state.cards.student_count"/></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Jumlah Guru</div>
+                        <div class="value"><t t-esc="state.cards.teacher_count"/></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Jumlah Orang Tua</div>
+                        <div class="value"><t t-esc="state.cards.parent_count"/></div>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

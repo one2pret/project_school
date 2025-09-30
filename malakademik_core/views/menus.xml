@@ -63,42 +63,32 @@
     </record>
 
     <!-- Root Menu -->
-    <menuitem id="menu_malakademik_root" name="Academics" sequence="10"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_root" name="Academics" sequence="10" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
 
     <!-- Master Data -->
-    <menuitem id="menu_malakademik_master" name="Master Data" parent="menu_malakademik_root" sequence="10"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_students" name="Students" parent="menu_malakademik_master" action="action_malakademik_student" sequence="10"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_teachers" name="Teachers" parent="menu_malakademik_master" action="action_malakademik_teacher" sequence="20"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_parents" name="Parents" parent="menu_malakademik_master" action="action_malakademik_parent" sequence="30"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_classrooms" name="Classrooms" parent="menu_malakademik_master" action="action_malakademik_classroom" sequence="40"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_subjects" name="Subjects" parent="menu_malakademik_master" action="action_malakademik_subject" sequence="50"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_curricula" name="Curricula" parent="menu_malakademik_master" action="action_malakademik_curriculum" sequence="60"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_master" name="Master Data" parent="menu_malakademik_root" sequence="20" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_students" name="Students" parent="menu_malakademik_master" action="action_malakademik_student" sequence="10" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_teachers" name="Teachers" parent="menu_malakademik_master" action="action_malakademik_teacher" sequence="20" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_parents" name="Parents" parent="menu_malakademik_master" action="action_malakademik_parent" sequence="30" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_classrooms" name="Classrooms" parent="menu_malakademik_master" action="action_malakademik_classroom" sequence="40" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_subjects" name="Subjects" parent="menu_malakademik_master" action="action_malakademik_subject" sequence="50" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_curricula" name="Curricula" parent="menu_malakademik_master" action="action_malakademik_curriculum" sequence="60" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
 
     <!-- Operations -->
-    <menuitem id="menu_malakademik_operations" name="Operations" parent="menu_malakademik_root" sequence="20"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_schedules" name="Schedules" parent="menu_malakademik_operations" action="action_malakademik_schedule" sequence="10"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_attendance" name="Attendance" parent="menu_malakademik_operations" action="action_malakademik_attendance" sequence="20"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_assessments" name="Assessments" parent="menu_malakademik_operations" action="action_malakademik_assessment" sequence="30"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_report_cards" name="Report Cards" parent="menu_malakademik_operations" action="action_malakademik_report_card" sequence="40"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_assignments" name="Assignments" parent="menu_malakademik_operations" action="action_malakademik_assignment" sequence="50"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_operations" name="Operations" parent="menu_malakademik_root" sequence="10" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_schedules" name="Schedules" parent="menu_malakademik_operations" action="action_malakademik_schedule" sequence="10" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_attendance" name="Attendance" parent="menu_malakademik_operations" action="action_malakademik_attendance" sequence="20" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_assessments" name="Assessments" parent="menu_malakademik_operations" action="action_malakademik_assessment" sequence="30" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_report_cards" name="Report Cards" parent="menu_malakademik_operations" action="action_malakademik_report_card" sequence="40" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_assignments" name="Assignments" parent="menu_malakademik_operations" action="action_malakademik_assignment" sequence="50" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
 
     <!-- Communication -->
-    <menuitem id="menu_malakademik_communication" name="Communication" parent="menu_malakademik_root" sequence="30"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_notifications" name="Notifications" parent="menu_malakademik_communication" action="action_malakademik_notification" sequence="10"
-              groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_communication" name="Communication" parent="menu_malakademik_root" sequence="30" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_notifications" name="Notifications" parent="menu_malakademik_communication" action="action_malakademik_notification" sequence="10" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+
+    <!-- Tools -->
+    <menuitem id="menu_malakademik_tools" name="Tools" parent="menu_malakademik_root" sequence="90" groups="malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_generate_demo" name="Generate Sample Data" parent="menu_malakademik_tools" action="action_malakademik_demo_wizard" sequence="10" groups="malakademik_core.group_malakademik_manager"/>
+    <menuitem id="menu_malakademik_export" name="Export Siswa (CSV Dapodik)" parent="menu_malakademik_tools" action="action_malakademik_student_export_wizard" sequence="20" groups="malakademik_core.group_malakademik_manager"/>
 </odoo>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_guru_teacher_dashboard" model="ir.actions.client">
+        <field name="name">Teacher Dashboard</field>
+        <field name="tag">guru_dashboard.teacher_dashboard</field>
+        <field name="target">main</field>
+    </record>
+
+    <menuitem id="menu_guru_teacher_dashboard" name="Teacher Dashboard" parent="malakademik_core.menu_malakademik_root" action="action_guru_teacher_dashboard" sequence="5" groups="malakademik_core.group_malakademik_user,malakademik_core.group_malakademik_manager"/>
+</odoo>

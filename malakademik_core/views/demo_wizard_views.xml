@@ -26,11 +26,4 @@
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
-
-    <!-- Menu under Academics for managers only -->
-    <menuitem id="menu_malakademik_tools" name="Tools" parent="menu_malakademik_root" sequence="90"
-              groups="malakademik_core.group_malakademik_manager"/>
-    <menuitem id="menu_malakademik_generate_demo" name="Generate Sample Data" parent="menu_malakademik_tools" sequence="10"
-              action="action_malakademik_demo_wizard" groups="malakademik_core.group_malakademik_manager"/>
 </odoo>
-
